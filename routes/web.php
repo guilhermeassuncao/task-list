@@ -3,7 +3,6 @@
 use App\Http\Requests\TaskRequest;
 use App\Models\Task;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Http\Request;
 
 
 Route::get('/', function () {
@@ -11,7 +10,7 @@ Route::get('/', function () {
 });
 
 Route::get('/tasks', function () {
-    return view('index', ['tasks' => Task::latest()->get()]);
+    return view('index', ['tasks' => Task::latest()->paginate(10)]);
 })->name('tasks.index');
 
 Route::view('tasks/create', 'create')->name('tasks.create');
@@ -41,3 +40,9 @@ Route::delete('/tasks/{task}', function (Task $task) {
 
     return redirect()->route('tasks.index')->with('success', 'Tarefa excluída com sucesso!');
 })->name('tasks.destroy');
+
+Route::put('/tasks/{task}/toggle-complete', function (Task $task) {
+    $task->toggleComplete();
+
+    return redirect()->back()->with('success', 'Tarefa atualizada com sucesso!');
+})->name('tasks.toggle-complete');
