@@ -1,22 +1,23 @@
 # Task List
 
+<br>
+
 ## :bookmark_tabs: Sobre
 
-Projeto desenvolvido no curso Bootstrap
+Projeto desenvolvido no curso Master Laravel 10 for Beginners & Intermediate
 
-Intituição - Origamid
+Intituição - Udemy
 
-Professor - André Rafael
+Professor - Piotr Jura
 
 <br>
 
 ## :rocket: Tecnologias
 
--   HTML5
--   CSS3
--   JavaScript
--   Jquery
--   Bootstrap
+-   PHP
+-   Laravel
+-   Blade
+-   Alpine.js
 
 <br>
 
