@@ -12,6 +12,10 @@ Professor - Piotr Jura
 
 <br>
 
+```bash
+cd teste
+```
+
 ## :rocket: Tecnologias
 
 -   PHP
